@@ -14,12 +14,13 @@ def load_data():
 
 print("Checkpoint 1 reached; code works")
 
-# Save data to file
 def save_data(data):
     with open(DATA_FILE, "w") as f:
         json.dump(data, f)
 
-# Get user input
+print("Checkpoint 2 reached; code works")
+
+
 def get_user_move():
     while True:
         move = input("Enter your move (rock, paper, scissors): ").lower()
@@ -27,7 +28,7 @@ def get_user_move():
             return move
         print("Invalid move. Try again.")
 
-# Determine winner
+
 def determine_winner(user_move, ai_move):
     if user_move == ai_move:
         return "tie"
@@ -37,7 +38,6 @@ def determine_winner(user_move, ai_move):
         return "user"
     return "ai"
 
-# Predict AI move using Markov Chain
 def predict_ai_move(history):
     if len(history) < 2:
         return random.choice(MOVES)
@@ -50,7 +50,6 @@ def predict_ai_move(history):
     predicted_move = max(transitions[last_move], key=transitions[last_move].get)
     return {"rock": "paper", "paper": "scissors", "scissors": "rock"}[predicted_move]
 
-# Game loop
 def play_game():
     data = load_data()
     while True:
