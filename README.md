@@ -99,6 +99,4 @@ This project is licensed under the MIT License.
 
 ---
 
-## **Acknowledgments**
-Special thanks to the open-source community for inspiration and support!
-
+<p align="center"><strong>Developed with ❤️ by Sinan Bandi</strong></p> 
